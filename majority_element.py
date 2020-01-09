@@ -18,7 +18,7 @@ Algorithm:
 3: Return the property that has the greatest value
 """
 
-def findMode(lst):
+def findMajority(lst):
     numCount = {}
     for num in lst:
         if num in numCount:
@@ -26,7 +26,7 @@ def findMode(lst):
         else:
             numCount[num] = 1
     for num in numCount:
-        if numCount[num] == max(list(numCount.values())):
+        if numCount[num] > len(lst) / 2:
             return num
     
         
