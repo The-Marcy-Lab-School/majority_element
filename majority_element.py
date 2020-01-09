@@ -16,11 +16,16 @@ Algorthim:
 
 """
 
-def majority_element(ar):
-  counter = 0
-  for i in ar:
-    counter = i 
-  return counter
+def majority_element(n):
+  counter = {}
+  for i in n:
+    if i in counter:
+      counter[i] += 1 
+    else:
+      counter[i] = 1
+  for i in counter:
+    if counter[i] > len(n) / 2:
+      return i
   
 ar = [3,2,3]
 ar2 = [2,2,1,1,1,2,2]
