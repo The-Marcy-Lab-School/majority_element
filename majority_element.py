@@ -31,10 +31,10 @@ def majortiy_element(list):
             dic[el] = 1
     
     for key in dic:
-        if dic[key] >= len(list)/2: 
+        if dic[key] > len(list)/2: 
             return key
             
       
 print(majortiy_element([2,2,1,1,1,2,2]) == 2)  
 print(majortiy_element( [3,2,3]) == 3)
-print(majortiy_element([2,3,4,5,5,5,5,1]) == 5)
+print(majortiy_element([2,3,5,5,5,5,9,1]) == 5)
