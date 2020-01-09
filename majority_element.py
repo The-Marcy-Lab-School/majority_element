@@ -32,10 +32,9 @@ def majority_element(lst):
             elements[ele] += 1
 
     for ele in elements:
+        if elements[ele] > len(lst) / 2:
+            return ele
 
-        if ele / 2 < highest:
-            highest = ele
 
-    return highest
-
-majority_element([3,2,3])
+print(majority_element([3,2,3]))
+print(majority_element([2,2,1,1,1,2,2]))
