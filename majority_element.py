@@ -23,6 +23,7 @@ A:
 
 def majority_element(lst):
     elements = {}
+    highest = 0
 
     for ele in lst:
         if(ele not in elements):
@@ -30,6 +31,11 @@ def majority_element(lst):
         else:
             elements[ele] += 1
 
-    return max(elements, key = elements.get)
+    for ele in elements:
+
+        if ele / 2 < highest:
+            highest = ele
+
+    return highest
 
 majority_element([3,2,3])
