@@ -17,12 +17,13 @@ A - Create a dictionary to keep track of the number of occurances until you reac
 """
 
 def majority_element(n):
-    occurances = {}
-    for i in range(len(n)):
-        if i in occurances:
-            occurances[i] += 1
+    occurrences = {}
+    for i in n:
+        if i in occurrences:
+            occurrences[i] += 1
         else:
-            occurances[i] = 1
-    return occurances
-    
-print(majority_element([3, 2, 3]))
+            occurrences[i] = 1
+            
+    for i in occurrences:
+        if occurrences[i] > len(n) / 2:
+            return i
